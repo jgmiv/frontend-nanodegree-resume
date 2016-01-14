@@ -1,7 +1,9 @@
+@import url(https://fonts.googleapis.com/css?family=Orbitron);
+
 * {
   padding:0;
   margin:0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Orbitron', latin;
 }
 
 .clearfix {
@@ -152,7 +154,7 @@ img {
 
 /* Bar chart stuff */
 .chart div {
-  font: 10px sans-serif;
+  font: 10px latin;
   background-color: #4A4A4A;
   text-align: right;
   padding: 3px;
