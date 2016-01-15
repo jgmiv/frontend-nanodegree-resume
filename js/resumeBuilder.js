@@ -126,7 +126,7 @@ var work = {
 		"position": "Guidance and Control Technician",
 		"employer":"USAF",
 		"years": "1993-2001",
-		"location": "Biloxi, MS; Fayetteville, NC",
+		"location": "Fayetteville, NC",
 		"description":"Maintained variuos systems required for flight on a C-130 aircraft"
 	}
   ]
