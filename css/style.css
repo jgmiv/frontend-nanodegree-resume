@@ -40,13 +40,13 @@ h3 {
 h4 {
   font-weight: bold;
   font-size: 14px;
-  color: #4A4A4A;
+  color: #091177;
   line-height: 17px;
 }
 
-h2, 
-h3, 
-h4, 
+h2,
+h3,
+h4,
 h5 {
   padding:10px;
   padding-left: 5%;
@@ -78,7 +78,7 @@ p {
 }
 
 a {
-  color: #1199C3;
+  color: #167ef6;
   text-decoration: none;
   margin-top: 10px;
   display: block;
@@ -185,7 +185,7 @@ button{
   }
 
   button {
-    background-color: yellow; 
+    background-color: yellow;
   }
 }
 
@@ -195,7 +195,7 @@ button{
   }
 
   button {
-    background-color: green; 
+    background-color: green;
   }
 }
 
@@ -210,7 +210,7 @@ button{
     display: none;
   }
   button {
-    background-color: blue; 
+    background-color: blue;
   }
 }
 
