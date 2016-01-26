@@ -19,117 +19,117 @@ var bio = {
         "location": "Cottondale, AL"
     },
     "biopic": "http://jimbarry.net/JamesMcCoy.jpg?zoom=2&amp;resize=300%2C300",
-    "welcome": "Hello World!  Watch out, here I come!",
+    "welcomeMessage": "Hello World!  Watch out, here I come!",
     "skills": ["Electronics", "Designer", "Engineering", "Maintenance"]
 };
 
 bio.display = function() {
 
 	var formattedPic = HTMLbioPic.replace("%data%", bio.biopic);
-	$("#header").append(formattedPic);
-	var formattedMessage = HTMLWelcomeMsg.replace("%data%", bio.welcome);
-	$("#header").append(formattedMessage);
+	var formattedMessage = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
 	var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.Mobile);
-	$("#topContacts").append(formattedMobile);
-	$("#footerContacts").append(formattedMobile);
 	var formattedEmail = HTMLemail.replace("%data%", bio.contacts.Email);
-	$("#topContacts").append(formattedEmail);
-	$("#footerContacts").append(formattedEmail);
 	var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
-	$("#topContacts").append(formattedTwitter);
-	$("#footerContacts").append(formattedTwitter);
 	var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-	$("#topContacts").append(formattedGithub);
-	$("#footerContacts").append(formattedGithub);
 	var formattedBlog = HTMLblog.replace("%data%", bio.contacts.blog);
-	$("#topContacts").append(formattedBlog);
-	$("#footerContacts").append(formattedBlog);
 	var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-	$("#topContacts").append(formattedLocation);
-	$("#footerContacts").append(formattedLocation);
 
-}
+	$("#header").append(formattedPic).append(formattedMessage);
 
-bio.display();
+	$("#topContacts").append(formattedMobile)
+	.append(formattedEmail)
+	.append(formattedTwitter)
+	.append(formattedGithub)
+	.append(formattedBlog)
+	.append(formattedLocation);
+
+	$("#footerContacts").append(formattedMobile)
+	.append(formattedEmail)
+	.append(formattedTwitter)
+	.append(formattedGithub)
+	.append(formattedBlog)
+	.append(formattedLocation);
 
 
-
-
-if (bio.skills.length > 0) {
+	if (bio.skills.length > 0) {
 
     $("#header").append(HTMLskillsStart);
 
     var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
     $("#skills").append(formattedSkill);
-    formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
+    var formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
     $("#skills").append(formattedSkill);
-    formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
+    var formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
     $("#skills").append(formattedSkill);
-    formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
+    var formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
     $("#skills").append(formattedSkill);
 
 }
 
+}
+
+bio.display();
+
 var work = {
 
     "jobs": [{
-        "position": "MGR OSP ENG & DSGN",
+        "title": "MGR OSP ENG & DSGN",
         "employer": "AT&T",
         "dates": "2015-Present",
         "location": "Cottondale, AL",
         "description": "Designed placement of facilities using CAD."
 
     }, {
-        "position": "MGR OSP ENG & DSGN (Planner)",
+        "title": "MGR OSP ENG & DSGN (Planner)",
         "employer": "AT&T",
         "dates": "2012-2015",
         "location": "Birmingham, AL",
         "description": "Managed the capital budget for replacing high trouble areas within copper facilities for the State of Alabama."
 
     }, {
-        "position": "MGR OSP CON & ENG",
+        "title": "MGR OSP CON & ENG",
         "employer": "AT&T",
         "dates": "2011-2012",
         "location": "Birmingham, AL",
         "description": "Supervised a crew of 18 Technicians.  Overseeing the replacement and repair of copper facilities."
     }, {
-        "position": "Facility Technician",
+        "title": "Facility Technician",
         "employer": "AT&T",
         "dates": "2008-2011",
         "location": "Montgomery, AL",
         "description": "Isolated and repaired troubles in copper facilities, spliced copper facilities, maintained air pressure on undrground facilities."
     }, {
-        "position": "MGR OSP CON & ENG (PCS Relieving)",
+        "title": "MGR OSP CON & ENG (PCS Relieving)",
         "employer": "BellSOUTH",
-        "dates": 2007,
+        "dates": "2007",
         "location": "Prattville, AL",
         "description": "Plant Contract Supervisor over cable placing contractors."
     }, {
-        "position": "MGR OSP ENG & DSGN (Relieving)",
+        "title": "MGR OSP ENG & DSGN (Relieving)",
         "employer": "BellSOUTH",
-        "dates": 2007,
+        "dates": "2007",
         "location": "Prattville, AL",
         "description": "Designed facility placement using CAD."
     }, {
-        "position": "Services Technician",
+        "title": "Services Technician",
         "employer": "BellSOUTH",
         "dates": "1999-2008",
         "location": "Prattville, AL",
         "description": "Installed and repaired telephone services."
     }, {
-        "position": "Maintenance",
+        "title": "Maintenance",
         "employer": "Big Lots Wharehouses",
         "dates": "1998-1999",
         "location": "Montgomery, AL",
         "description": "Maintained a computer based conveyor system."
     }, {
-        "position": "Maintenance",
+        "title": "Maintenance",
         "employer": "PMAg (SweetLix)",
         "dates": "1997-1998",
         "location": "Montgomery, AL",
         "description": "Maintained several machines, electrically and mechanically, used in production of feed for cattle"
     }, {
-        "position": "Guidance and Control Technician",
+        "title": "Guidance and Control Technician",
         "employer": "USAF",
         "dates": "1993-2001",
         "location": "Fayetteville, NC",
@@ -138,15 +138,15 @@ var work = {
 };
 
 work.display = function () {
-    for (var job in work.jobs) {
+	var len = work.jobs.length;
+    for (var i = 0; i < len; i++) {
         $("#workExperience").append(HTMLworkStart);
-
-        var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-        var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].position);
+        var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[i].employer);
+        var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[i].title);
         var formattedEmployerTitle = formattedEmployer + formattedTitle;
-        var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
-        var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
-        var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+        var formattedDates = HTMLworkDates.replace("%data%", work.jobs[i].dates);
+        var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[i].location);
+        var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[i].description);
         $(".work-entry:last").append(formattedEmployerTitle)
         .append(formattedDates)
         .append(formattedLocation)
@@ -160,18 +160,17 @@ work.display();
 var projects = {
     "designs": [{
         "title": "Webmockup",
-        "dates": 2015,
+        "dates": "2015",
         "description": "Created a responsive web site utilizing the mobile first approach.",
         "images": ["images/intotheteam.jpg", "images/intotheteam.jpg"]
     }, {
         "title": "About Me",
-        "dates": 2015,
+        "dates": "2015",
         "description": "Created a web site that tells just a little bit about me.",
         "images": ["images/fry.jpg", "images/fry.jpg"]
 
     }]
-}
-
+};
 
 projects.display = function() {
 	var len = projects.designs.length;
@@ -204,7 +203,7 @@ var education = {
         "location": "Mountain View, CA",
         "degree": ["Certificate", "Nanodegree"],
         "major": ["Intro-to-CompSci", "Front-End-Web-Developer Nanodegree"],
-        "dates": ["2015", "2016"],
+        "dates": "2015-2016",
         "url": "https://www.udacity.com",
 
     }, {
@@ -248,19 +247,19 @@ var education = {
         }, {
             "title": "How to use Gig and GitHub",
             "school": "Udacity",
-            "date": 2015,
+            "date": "2015",
             "url": "https://www.udacity.com/course/viewer#!/c-ud775"
 
         }, {
             "title": "Intro to HTML and CSS",
             "school": "Udacity",
-            "date": 2015,
+            "date": "2015",
             "url": "https://www.udacity.com/course/viewer#!/c-ud304"
 
         }, {
             "title": "Programming Foundations with Python",
             "school": "Udacity",
-            "date": 2015,
+            "date": "2015",
             "url": "https://www.udacity.com/course/viewer#!/c-ud036"
 
         }
@@ -270,17 +269,16 @@ var education = {
 };
 
 education.display = function () {
-    for (var school in education.schools) {
-
+    var len = education.schools.length;
+    for (var i = 0; i < len; i++)  {
         $("#education").append(HTMLschoolStart);
-
-        var formattedName = HTMLschoolName.replace("%data%", education.schools[school].name);
-        var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
+        var formattedName = HTMLschoolName.replace("%data%", education.schools[i].name);
+        var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[i].degree);
         var formattedNameDegree = formattedName + formattedDegree;
-        var formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
-        var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
-        var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
-        var formattedURL = HTMLonlineURL.replace("%data%", education.schools[school].url);
+        var formattedDates = HTMLschoolDates.replace("%data%", education.schools[i].dates);
+        var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[i].location);
+        var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[i].major);
+        var formattedURL = HTMLonlineURL.replace("%data%", education.schools[i].url);
         $(".education-entry:last").append(formattedNameDegree)
         .append(formattedDates)
         .append(formattedLocation)
@@ -289,13 +287,13 @@ education.display = function () {
     }
 
     $(".education-entry:last").append(HTMLonlineClasses);
-
-    for (courses in education.onlineCourses) {
-        var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[courses].title);
-        var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[courses].school);
+    var len = education.onlineCourses.length;
+    for (var i = 0; i < len; i++)  {
+        var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[i].title);
+        var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[i].school);
         var formattedTitleSchool = formattedTitle + formattedSchool;
-        var formattedDates = HTMLonlineDates.replace("%data%", education.onlineCourses[courses].date);
-        var formattedURL = HTMLonlineURL.replace("%data%", education.onlineCourses[courses].url);
+        var formattedDates = HTMLonlineDates.replace("%data%", education.onlineCourses[i].date);
+        var formattedURL = HTMLonlineURL.replace("%data%", education.onlineCourses[i].url);
         $(".education-entry:last").append(formattedTitleSchool)
 		.append(formattedDates)
         .append(formattedURL);
